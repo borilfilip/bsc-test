@@ -4,6 +4,7 @@ import './Item.css';
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import {FormattedMessage} from "react-intl";
 
 const item = (props) => {
     return (
@@ -14,7 +15,7 @@ const item = (props) => {
                         {props.children}
                     </Col>
                     <Col xs="auto">
-                        <Link to={"/detail/" + props.id}>Detail</Link>
+                        <Link to={"/detail/" + props.id}><FormattedMessage id="app.detail" defaultMessage="Detail" /></Link>
                     </Col>
                 </Row>
             </Card.Body>

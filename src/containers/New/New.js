@@ -5,6 +5,7 @@ import {Redirect} from "react-router";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import EditDetailForm from "../../components/EditNoteForm/EditDetailForm";
 import {Link} from "react-router-dom";
+import {FormattedMessage} from "react-intl";
 
 class New extends Component {
     state = {
@@ -50,7 +51,7 @@ class New extends Component {
             submit={this.saveHandler}/>;
 
         if (this.state.saving) {
-            note = "Ukládání...";
+            note = <FormattedMessage id="app.saving" defaultMessage="Saving..." />;
         }
 
         return (
@@ -59,7 +60,9 @@ class New extends Component {
                     {note}
                 </Jumbotron>
                 <div>
-                    <Link to="/" className="btn btn-sm btn-secondary">Zpět</Link>
+                    <Link to="/" className="btn btn-sm btn-secondary">
+                        <FormattedMessage id="app.back" defaultMessage="Back" />
+                    </Link>
                 </div>
             </div>
         );

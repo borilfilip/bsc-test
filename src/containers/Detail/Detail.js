@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import EditDetailForm from "../../components/EditNoteForm/EditDetailForm";
+import {FormattedMessage} from "react-intl";
 
 class Detail extends Component {
     state = {
@@ -73,7 +74,7 @@ class Detail extends Component {
             return <Redirect to='/'/>;
         }
 
-        let note = "Loading...";
+        let note = <FormattedMessage id="app.loading" defaultMessage="Loading..." />;
 
         if (this.state.note) {
             note = this.state.note.title;
@@ -86,7 +87,7 @@ class Detail extends Component {
             }
 
             if (this.state.saving) {
-                note = "Ukládání...";
+                note = <FormattedMessage id="app.saving" defaultMessage="Saving..." />;
             }
         }
 
@@ -96,22 +97,22 @@ class Detail extends Component {
                     {note}
                 </Jumbotron>
                 <div>
-                    <Link to="/" className="btn btn-sm btn-secondary">Zpět</Link>{' '}
-                    <Button size="sm" onClick={this.editHandler}>Editovat</Button>{' '}
-                    <Button size="sm" variant="danger" onClick={this.showHandler}>Smazat</Button>
+                    <Link to="/" className="btn btn-sm btn-secondary"><FormattedMessage id="app.back" defaultMessage="Back" /></Link>{' '}
+                    <Button size="sm" onClick={this.editHandler}><FormattedMessage id="app.edit" defaultMessage="Edit" /></Button>{' '}
+                    <Button size="sm" variant="danger" onClick={this.showHandler}><FormattedMessage id="app.delete" defaultMessage="Delete" /></Button>
                 </div>
 
                 <Modal show={this.state.deleting} onHide={this.closeHandler}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Opravdu smazat?</Modal.Title>
+                        <Modal.Title><FormattedMessage id="app.really_delete" defaultMessage="Really delete?" /></Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>Opravdu chcete smazat tuto poznámku?</Modal.Body>
+                    <Modal.Body><FormattedMessage id="app.really_delete_note" defaultMessage="Do you really want to delete this note?" /></Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.closeHandler}>
-                            Zrušit
+                            <FormattedMessage id="app.cancel" defaultMessage="Cancel" />
                         </Button>
                         <Button variant="danger" onClick={this.deleteHandler}>
-                            Smazat
+                            <FormattedMessage id="app.delete" defaultMessage="Delete" />
                         </Button>
                     </Modal.Footer>
                 </Modal>

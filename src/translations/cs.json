@@ -1,0 +1,13 @@
+{
+  "app.back": "Zpět",
+  "app.saving": "Ukládání...",
+  "app.loading": "Načítání...",
+  "app.new": "Nový",
+  "app.detail": "Detail",
+  "app.edit": "Editovat",
+  "app.delete": "Smazat",
+  "app.save": "Uložit",
+  "app.really_delete": "Opravdu smazat?",
+  "app.really_delete_note": "Opravdu chcete smazat tuto poznámku?",
+  "app.cancel": "Zrušit"
+}

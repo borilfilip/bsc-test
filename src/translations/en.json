@@ -1,0 +1,13 @@
+{
+  "app.back": "Back",
+  "app.saving": "Saving...",
+  "app.loading": "Loading...",
+  "app.new": "New",
+  "app.detail": "Detail",
+  "app.edit": "Edit",
+  "app.delete": "Delete",
+  "app.save": "Save",
+  "app.really_delete": "Really delete?",
+  "app.really_delete_note": "Do you really want to delete this note?",
+  "app.cancel": "Cancel"
+}
