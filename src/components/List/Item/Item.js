@@ -11,7 +11,7 @@ const item = (props) => {
         <Card className="Item">
             <Card.Body>
                 <Row>
-                    <Col>
+                    <Col id={"item-" + props.id}>
                         {props.children}
                     </Col>
                     <Col xs="auto">
