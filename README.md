@@ -10,6 +10,12 @@
 
 `npm install`
 
+### Run project
+
+`npm start`
+
+## Tests
+
 ### Install protractor and run selenium server
 
 Selenium server needs to be running to be able to test
